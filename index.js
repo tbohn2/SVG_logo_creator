@@ -38,7 +38,7 @@ const selection = () =>
             else if (sel.shape === 'triangle') {
                 svg = new Triangle(sel.title, sel.txtColor, sel.bgColor);
             }
-            svg.write(svg.title, svg.txtColor, svg.bgColor, svg.shapetxt, svg.text)
+            svg.write(svg.title, svg.txtColor, svg.shapetxt, svg.text)
         }
         )
 
