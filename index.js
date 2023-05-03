@@ -1,4 +1,5 @@
 const inquirer = require('inquirer');
+const { Square, Triangle, Circle } = require('./lib/shapes.js')
 const { choices } = require('yargs');
 
 const selection = () =>
@@ -34,5 +35,4 @@ const selection = () =>
         }
         )
 
-selection();
-
+selection()
