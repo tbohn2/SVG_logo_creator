@@ -29,9 +29,11 @@ const selection = () =>
         ])
         .then((sel) => {
             if (sel.shape === 'square') {
-
+                console.log(typeof (sel.title));
+                const svg = new Square(sel.title, sel.txtColor, sel.bgColor);
+                console.log(svg);
+                svg.write(svg.title, svg.txtColor, svg.bgColor, svg.shapetxt)
             }
-            return (title);
         }
         )
 
