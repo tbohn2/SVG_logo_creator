@@ -28,6 +28,10 @@ const selection = () =>
             }
         ])
         .then((sel) => {
+            if (sel.title.length > 3) {
+                console.log("Only 3 characters maximun")
+                return;
+            }
             let svg
             if (sel.shape === 'square') {
                 svg = new Square(sel.title, sel.txtColor, sel.bgColor);
