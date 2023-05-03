@@ -28,12 +28,17 @@ const selection = () =>
             }
         ])
         .then((sel) => {
+            let svg
             if (sel.shape === 'square') {
-                console.log(typeof (sel.title));
-                const svg = new Square(sel.title, sel.txtColor, sel.bgColor);
-                console.log(svg);
-                svg.write(svg.title, svg.txtColor, svg.bgColor, svg.shapetxt)
+                svg = new Square(sel.title, sel.txtColor, sel.bgColor);
             }
+            else if (sel.shape === 'circle') {
+                svg = new Circle(sel.title, sel.txtColor, sel.bgColor);
+            }
+            else if (sel.shape === 'triangle') {
+                svg = new Triangle(sel.title, sel.txtColor, sel.bgColor);
+            }
+            svg.write(svg.title, svg.txtColor, svg.bgColor, svg.shapetxt, svg.text)
         }
         )
 
