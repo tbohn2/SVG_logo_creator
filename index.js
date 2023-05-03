@@ -13,18 +13,18 @@ const selection = () =>
             {
                 type: 'input',
                 name: 'txtColor',
-                message: 'What color would you like the text to be?'
-            },
-            {
-                type: 'input',
-                name: 'bgColor',
-                message: 'What color would you like the background to be?'
+                message: 'What color would you like the text to be? (if using HEX value, type # and then value)'
             },
             {
                 type: 'list',
                 name: 'shape',
                 message: 'What shape do you want for your logo?',
                 choices: ['square', 'circle', 'triangle']
+            },
+            {
+                type: 'input',
+                name: 'bgColor',
+                message: 'What color would you like the background to be? (if using HEX value, type # and then value)'
             }
         ])
         .then((sel) => {
